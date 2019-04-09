@@ -39,7 +39,7 @@ const formatValue = (val: mixed): string => {
   if (val instanceof AbstractEither) {
     return val.inspect();
   } else {
-    return JSON.stringify(val);
+    return JSON.stringify(val) || '';
   }
 };
 

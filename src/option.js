@@ -72,7 +72,7 @@ class AbstractOption<+A> {
       if (val instanceof _None || val instanceof _Some) {
         return `some(${val.inspect()})`;
       } else {
-        return `some(${JSON.stringify(val)})`;
+        return `some(${JSON.stringify(val) || ''})`;
       }
     }
   }
